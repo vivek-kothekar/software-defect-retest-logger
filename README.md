@@ -4,12 +4,6 @@ A clean, robust, and functional web application built from scratch for a college
 
 ---
 
-## 🎓 2-Minute College Viva Pitch
-
-> *"The **Software Defect Re-Test Execution Logger** is a QA management platform built with React, Express, and SQLite. When a bug is discovered, a **QA Tester** reports the defect and assigns it to a real **Developer**. The Developer diagnoses the root cause, applies a patch, and submits the build version for re-testing, moving the status to `READY_FOR_RETEST`. The QA Tester then verifies the fix in a dedicated Re-Test Queue and records either **PASS** or **FAIL** with sequential attempt numbers (`Attempt #1`, `Attempt #2`, ...). If the re-test fails, the defect is reopened and sent back to the developer. If the re-test passes, it enters `PENDING_CLOSURE`. Finally, the **QA Lead** reviews the successful test evidence and approves official closure (`CLOSED`). All data, fix histories, re-test attempts, and audit logs are persistently stored in SQLite."*
-
----
-
 ## 🚀 Key Features
 
 - **Strict 3-Role Authorization**: QA Tester, Developer, and QA Lead workspaces with dedicated sidebars, route guards, and backend permission validation.
