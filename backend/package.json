@@ -1,0 +1,15 @@
+{
+  "name": "defect-logger-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Software Defect Re-Test Execution Logger",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "init-db": "node database/init.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

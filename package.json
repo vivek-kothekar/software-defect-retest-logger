@@ -1,0 +1,10 @@
+{
+  "name": "software-defect-retest-logger",
+  "version": "1.0.0",
+  "description": "Software Defect Re-Test Execution Logger college project",
+  "scripts": {
+    "start:backend": "cd backend && node server.js",
+    "start:frontend": "cd frontend && npm run dev",
+    "init:db": "cd backend && node database/init.js"
+  }
+}
