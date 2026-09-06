@@ -5,10 +5,15 @@ frontend/node_modules/
 .env.*
 !.env.example
 dist/
+frontend/dist/
 build/
 *.log
 .DS_Store
 .vscode/
 .idea/
+*.sqlite
 *.sqlite-shm
 *.sqlite-wal
+backend/database/*.sqlite
+backend/database/*.sqlite-shm
+backend/database/*.sqlite-wal

@@ -37,6 +37,16 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Serve frontend static build in production
+const fs = require('fs');
+const frontendDistPath = path.join(__dirname, '../frontend/dist');
+if (fs.existsSync(frontendDistPath)) {
+  app.use(express.static(frontendDistPath));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(frontendDistPath, 'index.html'));
+  });
+}
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error('[Error Handler]', err);

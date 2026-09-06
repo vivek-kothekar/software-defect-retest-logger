@@ -2,7 +2,12 @@
   "name": "software-defect-retest-logger",
   "version": "1.0.0",
   "description": "Software Defect Re-Test Execution Logger college project",
+  "engines": {
+    "node": ">=22.5.0"
+  },
   "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node backend/server.js",
     "start:backend": "cd backend && node server.js",
     "start:frontend": "cd frontend && npm run dev",
     "init:db": "cd backend && node database/init.js"

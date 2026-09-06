@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Backend API for Software Defect Re-Test Execution Logger",
   "main": "server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
   "scripts": {
     "start": "node server.js",
     "init-db": "node database/init.js"
