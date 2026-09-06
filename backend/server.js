@@ -28,8 +28,8 @@ app.use('/api/defects', retestsRoutes);
 app.use('/api/closures', closuresRoutes);
 app.use('/api/defects', closuresRoutes);
 
-// Health check endpoint
-app.get('/api/health', (req, res) => {
+// Health check endpoints
+app.get(['/api/health', '/healthz'], (req, res) => {
   res.json({
     status: 'ok',
     service: 'Software Defect Re-Test Execution Logger API',
@@ -53,10 +53,10 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`=======================================================`);
   console.log(` SEQA Defect Re-Test Logger API Server running on port ${PORT}`);
   console.log(` Database: SQLite (backend/database/database.sqlite)`);
-  console.log(` Health Check: http://localhost:${PORT}/api/health`);
+  console.log(` Health Check: http://0.0.0.0:${PORT}/api/health`);
   console.log(`=======================================================`);
 });
